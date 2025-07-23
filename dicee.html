@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎲 Epic Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    
+    <div class="background-animation"></div>
+    
+    <div class="container">
+      <header class="game-header">
+        <h1 id="result">🎲 Roll the Dice 🎲</h1>
+        <p class="game-subtitle">May the best player win!</p>
+      </header>
+
+      <div class="game-board">
+        <div class="player player1">
+          <div class="player-info">
+            <h2><i class="fas fa-user"></i> Player 1</h2>
+            <div class="score-display">
+              <span class="score-label">Score:</span>
+              <span class="score" id="score1">0</span>
+            </div>
+          </div>
+          <div class="dice-container">
+            <img class="dice-img img1" src="./images/dice1.png" alt="Player 1 Dice">
+            <div class="dice-glow"></div>
+          </div>
+        </div>
+
+        <div class="vs-divider">
+          <div class="vs-text">VS</div>
+          <div class="lightning">⚡</div>
+        </div>
+
+        <div class="player player2">
+          <div class="player-info">
+            <h2><i class="fas fa-user"></i> Player 2</h2>
+            <div class="score-display">
+              <span class="score-label">Score:</span>
+              <span class="score" id="score2">0</span>
+            </div>
+          </div>
+          <div class="dice-container">
+            <img class="dice-img img2" src="./images/dice2.png" alt="Player 2 Dice">
+            <div class="dice-glow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="roll-btn" id="rollBtn">
+          <i class="fas fa-dice"></i>
+          <span>ROLL DICE</span>
+          <div class="btn-glow"></div>
+        </button>
+        <button class="reset-btn" id="resetBtn">
+          <i class="fas fa-redo"></i>
+          <span>Reset Game</span>
+        </button>
+      </div>
+
+      <div class="game-stats">
+        <div class="stat">
+          <span class="stat-label">Games Played:</span>
+          <span class="stat-value" id="gamesPlayed">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Draws:</span>
+          <span class="stat-value" id="draws">0</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
